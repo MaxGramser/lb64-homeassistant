@@ -1,0 +1,108 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "Add an LB-64",
+        "description": "The lamp has to be on your WiFi (set that up in the LB-64 app). Normally it is found by itself; if not, enter its address here.",
+        "data": {
+          "host": "Address"
+        },
+        "data_description": {
+          "host": "For example lb64-1a2b.local or 192.168.1.50. The app shows it under WiFi."
+        }
+      },
+      "zeroconf_confirm": {
+        "title": "LB-64 found",
+        "description": "Add **{name}** ({host}) to Home Assistant?"
+      }
+    },
+    "error": {
+      "cannot_connect": "The lamp does not answer at that address. Is it on, and on the same network?"
+    },
+    "abort": {
+      "already_configured": "This lamp is already set up.",
+      "cannot_connect": "The lamp does not answer."
+    }
+  },
+  "entity": {
+    "light": {
+      "lamp": {
+        "state_attributes": {
+          "mode": {
+            "name": "Mode",
+            "state": {
+              "off": "Off",
+              "on": "On",
+              "preview": "Preview",
+              "wake": "Sunrise",
+              "sleep": "Wind-down"
+            }
+          }
+        }
+      }
+    },
+    "number": {
+      "speed": {
+        "name": "Speed"
+      },
+      "gain": {
+        "name": "Boost"
+      }
+    },
+    "switch": {
+      "wake": {
+        "name": "Wake-up light"
+      },
+      "sleep": {
+        "name": "Wind-down"
+      },
+      "schedule": {
+        "name": "Schedule"
+      }
+    },
+    "time": {
+      "wake_time": {
+        "name": "Wake-up time"
+      },
+      "sleep_time": {
+        "name": "Wind-down time"
+      }
+    },
+    "sensor": {
+      "mode": {
+        "name": "Mode",
+        "state": {
+          "off": "Off",
+          "on": "On",
+          "preview": "Preview",
+          "wake": "Sunrise",
+          "sleep": "Wind-down"
+        }
+      },
+      "current": {
+        "name": "Current"
+      },
+      "power": {
+        "name": "Power"
+      },
+      "load": {
+        "name": "Load"
+      },
+      "fps": {
+        "name": "Frame rate"
+      },
+      "rssi": {
+        "name": "WiFi signal"
+      },
+      "heap": {
+        "name": "Free memory"
+      }
+    }
+  },
+  "exceptions": {
+    "unknown_preset": {
+      "message": "The lamp has no preset called {preset}."
+    }
+  }
+}

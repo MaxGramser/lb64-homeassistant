@@ -1,0 +1,108 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "title": "LB-64 toevoegen",
+        "description": "De lamp moet op je WiFi zitten (stel dat in met de LB-64-app). Normaal wordt hij vanzelf gevonden; zo niet, vul dan hier zijn adres in.",
+        "data": {
+          "host": "Adres"
+        },
+        "data_description": {
+          "host": "Bijvoorbeeld lb64-1a2b.local of 192.168.1.50. De app toont het onder WiFi."
+        }
+      },
+      "zeroconf_confirm": {
+        "title": "LB-64 gevonden",
+        "description": "**{name}** ({host}) toevoegen aan Home Assistant?"
+      }
+    },
+    "error": {
+      "cannot_connect": "De lamp antwoordt niet op dat adres. Staat hij aan, en op hetzelfde netwerk?"
+    },
+    "abort": {
+      "already_configured": "Deze lamp is al ingesteld.",
+      "cannot_connect": "De lamp antwoordt niet."
+    }
+  },
+  "entity": {
+    "light": {
+      "lamp": {
+        "state_attributes": {
+          "mode": {
+            "name": "Modus",
+            "state": {
+              "off": "Uit",
+              "on": "Aan",
+              "preview": "Voorbeeld",
+              "wake": "Zonsopkomst",
+              "sleep": "Afbouwen"
+            }
+          }
+        }
+      }
+    },
+    "number": {
+      "speed": {
+        "name": "Snelheid"
+      },
+      "gain": {
+        "name": "Boost"
+      }
+    },
+    "switch": {
+      "wake": {
+        "name": "Wekkerlicht"
+      },
+      "sleep": {
+        "name": "Afbouwen"
+      },
+      "schedule": {
+        "name": "Schema"
+      }
+    },
+    "time": {
+      "wake_time": {
+        "name": "Wektijd"
+      },
+      "sleep_time": {
+        "name": "Afbouwtijd"
+      }
+    },
+    "sensor": {
+      "mode": {
+        "name": "Modus",
+        "state": {
+          "off": "Uit",
+          "on": "Aan",
+          "preview": "Voorbeeld",
+          "wake": "Zonsopkomst",
+          "sleep": "Afbouwen"
+        }
+      },
+      "current": {
+        "name": "Stroom"
+      },
+      "power": {
+        "name": "Vermogen"
+      },
+      "load": {
+        "name": "Belasting"
+      },
+      "fps": {
+        "name": "Beeldsnelheid"
+      },
+      "rssi": {
+        "name": "WiFi-signaal"
+      },
+      "heap": {
+        "name": "Vrij geheugen"
+      }
+    }
+  },
+  "exceptions": {
+    "unknown_preset": {
+      "message": "De lamp heeft geen preset met de naam {preset}."
+    }
+  }
+}

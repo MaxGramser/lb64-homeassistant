@@ -1,0 +1,50 @@
+{
+  "entity": {
+    "light": {
+      "lamp": {
+        "default": "mdi:square-rounded"
+      }
+    },
+    "number": {
+      "speed": {
+        "default": "mdi:speedometer"
+      },
+      "gain": {
+        "default": "mdi:brightness-7"
+      }
+    },
+    "switch": {
+      "wake": {
+        "default": "mdi:weather-sunset-up"
+      },
+      "sleep": {
+        "default": "mdi:weather-sunset-down"
+      },
+      "schedule": {
+        "default": "mdi:calendar-clock"
+      }
+    },
+    "time": {
+      "wake_time": {
+        "default": "mdi:alarm"
+      },
+      "sleep_time": {
+        "default": "mdi:bed-clock"
+      }
+    },
+    "sensor": {
+      "mode": {
+        "default": "mdi:lightbulb-auto"
+      },
+      "load": {
+        "default": "mdi:gauge"
+      },
+      "fps": {
+        "default": "mdi:filmstrip"
+      },
+      "heap": {
+        "default": "mdi:memory"
+      }
+    }
+  }
+}
