@@ -50,16 +50,43 @@ data:
 
 ## Installation
 
-### HACS
+The integration is installed from this GitHub repository:
+`https://github.com/MaxGramser/lb64-homeassistant`
 
-1. Open HACS → three dots → **Custom repositories**
-2. Add `https://github.com/MaxGramser/lb64-homeassistant`, type **Integration**
-3. Install **LB-64** and restart Home Assistant
+### Home Assistant 2026.11 or newer: the Marketplace
+
+Home Assistant has the community store built in (it used to be HACS).
+
+[![Open this repository in the Home Assistant Marketplace](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=MaxGramser&repository=lb64-homeassistant&category=integration)
+
+Press the button, or do it by hand:
+
+1. Go to **Settings → Marketplace**.
+2. Select **Add from link** in the upper-right corner.
+3. Under **GitHub link**, enter `https://github.com/MaxGramser/lb64-homeassistant` and select **Add**.
+   If it asks for a **Type**, choose **Integration**. (The first time, the Marketplace asks you
+   to connect your GitHub account.)
+4. Open **LB-64** and install it. If Home Assistant shows a repair that asks for a restart,
+   let it restart.
+
+Updates then arrive in Home Assistant like any other update.
+
+### Home Assistant 2026.10 or older: HACS
+
+1. Open **HACS**, then the three dots in the upper-right corner → **Custom repositories**.
+2. Enter `https://github.com/MaxGramser/lb64-homeassistant`, type **Integration**, and select **Add**.
+3. Find **LB-64** in HACS, select **Download**, and restart Home Assistant.
 
 ### By hand
 
-Copy the folder `custom_components/lb64` into the `custom_components` folder of your Home
-Assistant configuration and restart Home Assistant.
+1. Download this repository: the green **Code** button on GitHub → **Download ZIP**, or the
+   source of the [latest release](https://github.com/MaxGramser/lb64-homeassistant/releases/latest).
+2. Copy the folder `custom_components/lb64` into the `custom_components` folder of your Home
+   Assistant configuration (create that folder if it is not there), so that you get
+   `config/custom_components/lb64/manifest.json`.
+3. Restart Home Assistant.
+
+Installed by hand, the integration does not update itself: repeat these steps for a new version.
 
 ## Setup
 
